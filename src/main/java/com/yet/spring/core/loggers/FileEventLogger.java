@@ -16,8 +16,12 @@ public class FileEventLogger extends AbstractLogger {
 	public FileEventLogger(String filename) {
 		this.filename = filename;
 	}
-	
-	public void init() throws IOException {
+
+    public FileEventLogger() {
+
+    }
+
+    public void init() throws IOException {
 		file = new File(filename);
 		if (file.exists() && !file.canWrite()) {
 			throw new IllegalArgumentException("Can't write to file " + filename);

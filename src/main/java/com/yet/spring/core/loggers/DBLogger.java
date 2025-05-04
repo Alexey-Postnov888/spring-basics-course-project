@@ -25,6 +25,10 @@ public class DBLogger extends AbstractLogger {
         this.schema = schema.toUpperCase();
     }
 
+    public DBLogger() {
+
+    }
+
     public void init() {
         createDBSchema();
         createTableIfNotExists();
